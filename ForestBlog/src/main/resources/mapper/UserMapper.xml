@@ -18,14 +18,15 @@
     <sql id="tb">user</sql>
 
     <sql id="Base_Column_List">
-    user_id, user_name, user_pass, user_nickname, user_email, user_url, user_avatar, 
-    user_last_login_ip, user_register_time, user_last_login_time, user_status
-  </sql>
+        user_id, user_name, user_pass, user_nickname, user_email, user_url, user_avatar,
+        user_last_login_ip, user_register_time, user_last_login_time, user_status
+    </sql>
 
     <select id="getUserById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select
         <include refid="Base_Column_List"/>
-        from <include refid="tb"/>
+        from
+        <include refid="tb"/>
         where user_id = #{userId,jdbcType=INTEGER}
     </select>
 
@@ -35,7 +36,8 @@
         where user_id = #{userId,jdbcType=INTEGER}
     </delete>
 
-    <insert id="insert" parameterType="com.liuyanzhao.ssm.blog.entity.User" useGeneratedKeys="true" keyProperty="userId">
+    <insert id="insert" parameterType="com.liuyanzhao.ssm.blog.entity.User" useGeneratedKeys="true"
+            keyProperty="userId">
         insert into
         <include refid="tb"/>
         (user_id, user_name, user_pass,
@@ -112,7 +114,6 @@
         </where>
         limit 1
     </select>
-
 
 
 </mapper>
