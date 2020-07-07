@@ -37,10 +37,10 @@ public class BackCategoryController {
      * @return
      */
     @RequestMapping(value = "")
-    public ModelAndView categoryList()  {
+    public ModelAndView categoryList() {
         ModelAndView modelandview = new ModelAndView();
         List<Category> categoryList = categoryService.listCategoryWithCount();
-        modelandview.addObject("categoryList",categoryList);
+        modelandview.addObject("categoryList", categoryList);
         modelandview.setViewName("Admin/Category/index");
         return modelandview;
 
@@ -53,8 +53,8 @@ public class BackCategoryController {
      * @param category
      * @return
      */
-    @RequestMapping(value = "/insertSubmit",method = RequestMethod.POST)
-    public String insertCategorySubmit(Category category)  {
+    @RequestMapping(value = "/insertSubmit", method = RequestMethod.POST)
+    public String insertCategorySubmit(Category category) {
         categoryService.insertCategory(category);
         return "redirect:/admin/category";
     }
@@ -66,7 +66,7 @@ public class BackCategoryController {
      * @return
      */
     @RequestMapping(value = "/delete/{id}")
-    public String deleteCategory(@PathVariable("id") Integer id)  {
+    public String deleteCategory(@PathVariable("id") Integer id) {
         //禁止删除有文章的分类
         int count = articleService.countArticleByCategoryId(id);
 
@@ -83,14 +83,14 @@ public class BackCategoryController {
      * @return
      */
     @RequestMapping(value = "/edit/{id}")
-    public ModelAndView editCategoryView(@PathVariable("id") Integer id)  {
+    public ModelAndView editCategoryView(@PathVariable("id") Integer id) {
         ModelAndView modelAndView = new ModelAndView();
 
-        Category category =  categoryService.getCategoryById(id);
-        modelAndView.addObject("category",category);
+        Category category = categoryService.getCategoryById(id);
+        modelAndView.addObject("category", category);
 
         List<Category> categoryList = categoryService.listCategoryWithCount();
-        modelAndView.addObject("categoryList",categoryList);
+        modelAndView.addObject("categoryList", categoryList);
 
         modelAndView.setViewName("Admin/Category/edit");
         return modelAndView;
@@ -102,8 +102,8 @@ public class BackCategoryController {
      * @param category 分类
      * @return 重定向
      */
-    @RequestMapping(value = "/editSubmit",method = RequestMethod.POST)
-    public String editCategorySubmit(Category category)  {
+    @RequestMapping(value = "/editSubmit", method = RequestMethod.POST)
+    public String editCategorySubmit(Category category) {
         categoryService.updateCategory(category);
         return "redirect:/admin/category";
     }

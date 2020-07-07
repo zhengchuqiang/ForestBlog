@@ -44,7 +44,7 @@ public class BackCommentController {
                                   Model model) {
         PageInfo<Comment> commentPageInfo = commentService.listCommentByPage(pageIndex, pageSize);
         model.addAttribute("pageInfo", commentPageInfo);
-        model.addAttribute("pageUrlPrefix","/admin/comment?pageIndex");
+        model.addAttribute("pageUrlPrefix", "/admin/comment?pageIndex");
         return "Admin/Comment/index";
     }
 

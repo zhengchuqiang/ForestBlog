@@ -32,10 +32,10 @@ public class NoticeController {
      */
     @RequestMapping(value = "/notice/{noticeId}")
     public String NoticeDetailView(@PathVariable("noticeId") Integer noticeId,
-                                         Model model) {
+                                   Model model) {
         //公告内容和信息显示
-        Notice notice  = noticeService.getNoticeById(noticeId);
-        model.addAttribute("notice",notice);
+        Notice notice = noticeService.getNoticeById(noticeId);
+        model.addAttribute("notice", notice);
 
         //侧边栏显示
         //获得热评文章

@@ -49,6 +49,7 @@ public interface ArticleMapper {
 
     /**
      * 文章归档
+     *
      * @return
      */
     List<Article> listAllNotWithContent();
@@ -86,7 +87,7 @@ public interface ArticleMapper {
      * 根据id查询用户信息
      *
      * @param status 状态
-     * @param id 文章ID
+     * @param id     文章ID
      * @return 文章
      */
     Article getArticleByStatusAndId(@Param(value = "status") Integer status, @Param(value = "id") Integer id);
@@ -101,8 +102,8 @@ public interface ArticleMapper {
      */
     @Deprecated
     List<Article> pageArticle(@Param(value = "status") Integer status,
-                                    @Param(value = "pageIndex") Integer pageIndex,
-                                    @Param(value = "pageSize") Integer pageSize);
+                              @Param(value = "pageIndex") Integer pageIndex,
+                              @Param(value = "pageSize") Integer pageSize);
 
 
     /**
@@ -140,11 +141,10 @@ public interface ArticleMapper {
     /**
      * 热评文章
      *
-     * @param limit  查询数量
+     * @param limit 查询数量
      * @return 文章列表
      */
     List<Article> listArticleByCommentCount(@Param(value = "limit") Integer limit);
-
 
 
     /**

@@ -9,7 +9,7 @@ import java.util.Date;
  * @author liuyanzhao
  */
 @Data
-public class User implements Serializable{
+public class User implements Serializable {
     private static final long serialVersionUID = -4415517704211731385L;
     private Integer userId;
 

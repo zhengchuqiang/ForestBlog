@@ -13,7 +13,7 @@ import java.util.List;
 public interface PageMapper {
     /**
      * 根据ID删除
-     * 
+     *
      * @param pageId 页面ID
      * @return 影响行数
      */
@@ -21,7 +21,7 @@ public interface PageMapper {
 
     /**
      * 添加
-     * 
+     *
      * @param page 页面
      * @return 影响行数
      */
@@ -29,7 +29,7 @@ public interface PageMapper {
 
     /**
      * 根据ID查询
-     * 
+     *
      * @param pageId 页面ID
      * @return 页面
      */
@@ -37,7 +37,7 @@ public interface PageMapper {
 
     /**
      * 更新
-     * 
+     *
      * @param page 页面
      * @return 影响行数
      */
@@ -45,7 +45,7 @@ public interface PageMapper {
 
     /**
      * 获得页面列表
-     * 
+     *
      * @param status 状态
      * @return 页面列表
      */
@@ -53,9 +53,9 @@ public interface PageMapper {
 
     /**
      * 根据key获得页面
-     * 
+     *
      * @param status 状态
-     * @param key 别名
+     * @param key    别名
      * @return 页面
      */
     Page getPageByKey(@Param(value = "status") Integer status,

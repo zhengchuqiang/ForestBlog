@@ -13,7 +13,7 @@ public interface TagMapper {
 
     /**
      * 根据ID删除
-     * 
+     *
      * @param tagId 标签ID
      * @return 影响行数
      */
@@ -21,7 +21,7 @@ public interface TagMapper {
 
     /**
      * 添加
-     * 
+     *
      * @param tag 标签
      * @return 影响行数
      */
@@ -37,6 +37,7 @@ public interface TagMapper {
 
     /**
      * 更新
+     *
      * @param tag 标签
      * @return 影响行数
      */
@@ -44,24 +45,24 @@ public interface TagMapper {
 
     /**
      * 获得标签总数
-     * 
+     *
      * @return 数量
      */
-    Integer countTag() ;
+    Integer countTag();
 
     /**
      * 获得标签列表
-     * 
+     *
      * @return 列表
      */
-    List<Tag> listTag() ;
+    List<Tag> listTag();
 
 
     /**
      * 根据标签名获取标签
-     * 
+     *
      * @param name 名称
      * @return 标签
      */
-    Tag  getTagByName(String name) ;
+    Tag getTagByName(String name);
 }

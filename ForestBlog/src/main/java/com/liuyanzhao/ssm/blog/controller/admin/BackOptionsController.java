@@ -26,10 +26,10 @@ public class BackOptionsController {
      * @return
      */
     @RequestMapping(value = "")
-    public ModelAndView index()  {
+    public ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView();
         Options option = optionsService.getOptions();
-        modelAndView.addObject("option",option);
+        modelAndView.addObject("option", option);
 
         modelAndView.setViewName("Admin/Options/index");
         return modelAndView;
@@ -41,10 +41,10 @@ public class BackOptionsController {
      * @return
      */
     @RequestMapping(value = "/edit")
-    public ModelAndView editOptionView()  {
+    public ModelAndView editOptionView() {
         ModelAndView modelAndView = new ModelAndView();
         Options option = optionsService.getOptions();
-        modelAndView.addObject("option",option);
+        modelAndView.addObject("option", option);
 
         modelAndView.setViewName("Admin/Options/edit");
         return modelAndView;
@@ -56,11 +56,11 @@ public class BackOptionsController {
      * @param options
      * @return
      */
-    @RequestMapping(value = "/editSubmit",method = RequestMethod.POST)
-    public String editOptionSubmit(Options options)  {
+    @RequestMapping(value = "/editSubmit", method = RequestMethod.POST)
+    public String editOptionSubmit(Options options) {
         //如果记录不存在，那就新建
         Options optionsCustom = optionsService.getOptions();
-        if(optionsCustom.getOptionId()==null) {
+        if (optionsCustom.getOptionId() == null) {
             optionsService.insertOptions(options);
         } else {
             optionsService.updateOptions(options);

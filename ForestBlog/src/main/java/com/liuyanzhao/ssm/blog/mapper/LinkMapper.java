@@ -14,6 +14,7 @@ public interface LinkMapper {
 
     /**
      * 删除
+     *
      * @param linkId 链接ID
      * @return 影响行数
      */
@@ -21,7 +22,7 @@ public interface LinkMapper {
 
     /**
      * 添加
-     * 
+     *
      * @param link 链接
      * @return 影响行数
      */
@@ -29,7 +30,7 @@ public interface LinkMapper {
 
     /**
      * 根据ID查询
-     * 
+     *
      * @param linkId 链接ID
      * @return 影响行数
      */
@@ -37,7 +38,7 @@ public interface LinkMapper {
 
     /**
      * 更新
-     * 
+     *
      * @param link 链接ID
      * @return 影响行数
      */
@@ -45,7 +46,7 @@ public interface LinkMapper {
 
     /**
      * 获得链接总数
-     * 
+     *
      * @param status 状态
      * @return 数量
      */
@@ -53,9 +54,9 @@ public interface LinkMapper {
 
     /**
      * 获得链接列表
-     * 
+     *
      * @param status 状态
-     * @return  列表
+     * @return 列表
      */
     List<Link> listLink(@Param(value = "status") Integer status);
 }
